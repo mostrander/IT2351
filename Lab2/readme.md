@@ -1,8 +1,8 @@
-***Executive Summary
+### Executive Summary
 
 Throughout this lab I will conduct several queries on my modified database to extract data and provide brief explanations of each query used to extract said data from the database.
 
-***Explanation of Queries
+### Explanation of Queries
 
 The first query I conducted on the database was a simply query that extracted the number of orders and total amount of taxes for all of the orders from the Orders table (see Lab2Part1.png). The sum function was used to add the tax information for all of the orders, and two columns were created to display the information.
 
@@ -12,6 +12,10 @@ Similar to the previous query, query three required the Products and Order_Items
 
 I found the fourth query more difficult to organize in a clean manner because initially I had null values appearing in the final query results due to improper grouping. I initially joined the Categories table with the Products and Order_Items tables, then I selected the category_name, product_name, and quantity fields for the query. I grouped the information by category_name and product_name fields, respectively, and used the rollup summary function to add summaries to the product_name and quantity fields. However, this caused the null values to appear. By working with this query I learned that the IF() function could be used in conjunction with the rollup summary function to provide summaries for both fields and erase the null values (see Lab2Part4.png)! 
 
+Query 5 was another easy thing to do once I figured out how to correctly insert a subquery into the code. All I did was select the product_name and list_price fields from the Products table, ordered the data by list price in descending order, and only selected the rows that contained list prices above the average list price for all of the products (See Lab2Part5.png).
 
+The sixth query required me to use different functions to convert the list_price field data from the Products table to other field types, and give each conversion column a new name for the results grid (See Lab2Part6.png).
 
-***Conclusion
+Query seven was extremely easy because I only had to use the substring_index() function to select specific parts of an email address. I only needed the email_address field from the Administrators table to accomplice this task (See Lab2Part7.png).
+
+### Conclusion
