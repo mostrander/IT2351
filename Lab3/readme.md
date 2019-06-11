@@ -6,6 +6,16 @@
   
   The second form for this table reduces the redundant rows from the table by separating out data that does not rely specifically on the primary key and placing the data into new tables. For example, the Address field is specific only to the Student information. Therefore, you can create a new table that creates a Student_ID primary key and include the following columns within the table: First Name, Last Name, and Address. Then, you can replace the information in the original table with the Student_ID column.
   
-  For the third normal form I went a little overboard and divided the data up into several new tables and used foreign keys to link the tables together. I separated the data into the following tables: Student, Classes, Majors, Department, and Faculty. 
+  For the third normal form I went a little overboard and divided the data up into several new tables and used foreign keys to link the tables together. I separated the data into the following tables: Student, Classes, Majors, Department, and Faculty. Below is the specific information concerning the data included in each table and how they relate to each other.
+  
+  The Student table consists of the Student_ID primary key, Student_First_Name, Student_Last_Name, Student_Address, and Student_Major_ID foreign key. The Student_Major_ID foreign key references the Major_ID from the Majors table.
+  
+  The Majors table consists of the Major_ID primary key, Major_Name, and the Major_Department_ID foreign key. The Major_Department_ID foreign key links the Majors table with the Department table through the Department_ID primary key.
+  
+  The Department table only consists of the Department_ID primary key and the Department_Name. There is no foreign keys on this table.
+  
+  The Classes table consists of the following columns: Class_ID primary key, Class_Number, Class_Name, Class_Faculty_ID foreign key, and Class_Department_ID foreign key. The Class_Faculty_ID links the Classes table to the Faculty table through the Faculty_ID primary key, and the Class_Department_ID foreign key links the Classes table to the Department table through the Department_ID primary key.
+  
+  Finally, the Faculty table includes a Faculty_ID primary key, a Emp_First_Name column, Emp_Last_Name column, Emp_Address column, and an Emp_Department_ID foreign key that links the table to the Department table through the Department_ID primary key.
 
 ### Conclusion
