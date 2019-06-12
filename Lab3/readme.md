@@ -1,5 +1,9 @@
 ### Executive Summary
-
+  This lab assignment is focused on normalizing a database and creating views from a database. In the section below I provide a detailed description of how I normalized the database provided for this assignment (SEE Lab3Part2_OriginalTable.png), as well as an image depicting the database in the third form (SEE Lab3Part3_3rdForm_table.png). It should be noted that I used MySQL WorkBench within a virtual machine, thus the lines depicting the relationships between the database tables are not displayed. 
+  
+  The second portion of the lab is focused on creating EER models from an existing database, such as the database used in the first part of this lab, and exporting the script for the database. This information is depicted in the Lab3Part3_3rdForm_table.png and Lab3Part4.sql files.
+  
+  Finally, the last portion of this lab is dedicated to creating views from an existing database. 
 
 ### Normalization
   Lab 3 Part 2 shows a table from a database that has not been normalized at all. In order to normalize the table to first form, the Student Name column must be separated into two new columns: First Name and Last Name. This will help with selecting data from the database later on, and the information can always be put together again through concatentation. In addition, the classes column should only contain one value per row in order for the table to be considered in the first normal form, and there cannot be any repeating columns.
