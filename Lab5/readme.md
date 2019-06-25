@@ -13,13 +13,13 @@
 
   There are four types of log files that provide additional information for the Database Administrator concerning the performance, alterations, and errors within the database during a duration of time, such as within the last month. While these logs contain extremely useful information, they often contain sensitive information and consume additional storage space. For these two reasons it is usually best to only enable the logs that are necessary.
   
-  Error logs contain all of the information pertaining to problems that occur in the database, as well as information concerning the startup and shutdown of the database system. This log is usually active because it can be used to correct problems as soon as possible. 
+  **Error logs** contain all of the information pertaining to problems that occur in the database, as well as information concerning the startup and shutdown of the database system. This log is usually active because it can be used to correct problems as soon as possible. 
   
-  Similarly, slow query logs are usually used to solve database problems. In this case, the slow query log contains information about SQL queries that are performing slowly. Therefore, the Database Administrator can use the information in this log to improve the performance of the database so the queries are executed more efficiently and faster.
+  Similarly, **slow query** logs are usually used to solve database problems. In this case, the slow query log contains information about SQL queries that are performing slowly. Therefore, the Database Administrator can use the information in this log to improve the performance of the database so the queries are executed more efficiently and faster.
   
-  Binary logs are another type of database log that is typically activated for a database because they contain important information concerning the changes made to the database since its last backup, and can be used to create backups of the database in case of power outages or system failure. 
+  **Binary logs** are another type of database log that is typically activated for a database because they contain important information concerning the changes made to the database since its last backup, and can be used to create backups of the database in case of power outages or system failure. 
   
-  Finally, relay logs are comprised of one or more binary logs that are used to pass any changes made on the "slave machine" to the "master machine". In other words, the database is replicated onto a secondary system where any changes made are then transferred over to the original database on the primary machine. However, this log is only needed if the administrator is using replication. 
+  Finally, **relay logs** are comprised of one or more binary logs that are used to pass any changes made on the "slave machine" to the "master machine". In other words, the database is replicated onto a secondary system where any changes made are then transferred over to the original database on the primary machine. However, this log is only needed if the administrator is using replication. 
   
   A general log containing client connections, SQL statements, and additional information also exists.
 
@@ -64,7 +64,7 @@
   
 ### C Explain why roles would be useful.
     
-      For larger organizations it is easier to create roles and assign individuals to those roles. Then, the privileges can be assigned to each role. If necessary, the Database Administrator can alter the privileges of the role or remove individuals from a role, thus simplifying the process of granting permissions to users overall. It would also be easier to maintain in the long-term.
+   For larger organizations it is easier to create roles and assign individuals to those roles. Then, the privileges can be assigned to each role. If necessary, the Database Administrator can alter the privileges of the role or remove individuals from a role, thus simplifying the process of granting permissions to users overall. It would also be easier to maintain in the long-term.
     
 
 ## Backing Up a Database
