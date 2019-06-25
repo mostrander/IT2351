@@ -78,6 +78,8 @@
    It is extremely important to create backups for a database because it only takes on incident to completely wipe a database of all the information. For example, a harddrive can fail for a vriety of reasons, including hardware overheating and damage caused by a virus. Without a backup of the database, the organization would permanently lose all of the information, and subsequently risk losing millions of dollars or even bankruptcy! Thus, all Database Administrators should prioritize the creation of database bacups and store them on a safe harddrive separate from the one tht contains the active database.
   
   ### B: What is the difference between a full and incremental backup?
+  
+   As discussed above, a full backup contains all of the information for the database and can be used to restore the database should system failure occur. Incremental backups, on the other hand, contain the information pertaining to the updates and alterations made to the database since the previous full backup.
 
 ## Conclusion
 
