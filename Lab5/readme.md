@@ -1,7 +1,7 @@
-### Executive Summary
+## Executive Summary
 
 
-### Database Administrator Responsibilities 
+## Database Administrator Responsibilities 
 
   The primary responsibilities of a Database Administrator is to create, maintain, and protect a database for the organization that employed the individual. This normally entails designing a database from scratch or modifying an existing database by organizing the data into smaller, managable tables of information that are then linked together by primary and foreign keys. A well organized database can help prevent duplicate data in the system. 
   
@@ -9,7 +9,7 @@
   
   Finally, the Database Administrator must maintain the database so it remains organized and free of duplicate information. The administrator can use a variety of logs to determine how to alter the database to improve functionality and performance, as well as address errors. Logs are discussed in the following section.
 
-### Log Files
+## Log Files
 
   There are four types of log files that provide additional information for the Database Administrator concerning the performance, alterations, and errors within the database during a duration of time, such as within the last month. While these logs contain extremely useful information, they often contain sensitive information and consume additional storage space. For these two reasons it is usually best to only enable the logs that are necessary.
   
@@ -23,27 +23,27 @@
   
   A general log containing client connections, SQL statements, and additional information also exists.
 
-### Variables
+## Variables
 
   There are two types of variables that exist for a database: status and system variables.
   
   Status variables contan information about the status of the database, such as the connections variable that informs the administrator of how many connection attempts were made for the database. Similarly, system variables provide information about the database system itself, such as how it is currently configured. For example, the binlog_format variable describes how the binary logs for the database are formatted.
 
-### Privileges
+## Privileges
 
 
-# A:
+### A
 
-# B:
+### B
 
-# C:
+### C
 
-# D:
+### D
 
 
-### Roles
+## Roles
 
-  # A: Create a role to provide update privileges to the categories table (either here in discussion format or in MySQL Workbench)
+### A: Create a role to provide update privileges to the categories table (either here in discussion format or in MySQL Workbench)
     
     CREATE ROLE standardUser;
     
@@ -53,7 +53,7 @@
     
     Note: Replace [database name] with the actual name of the database being used for this SQL statement.
   
-  # B: Grant privileges to the role and, assign users to the role (either here in discussion format or in MySQL Workbench)
+### B: Grant privileges to the role and, assign users to the role (either here in discussion format or in MySQL Workbench)
     
     GRANT SELECT, INSERT, UPDATE
     ON [database name].categories 
@@ -62,15 +62,17 @@
     GRANT standardUser TO LILY, MIKE;
     
   
-  # C: Explain why roles would be useful.
+### C Explain why roles would be useful.
     
       For larger organizations it is easier to create roles and assign individuals to those roles. Then, the privileges can be assigned to each role. If necessary, the Database Administrator can alter the privileges of the role or remove individuals from a role, thus simplifying the process of granting permissions to users overall. It would also be easier to maintain in the long-term.
     
 
-### Backing Up a Database
+## Backing Up a Database
 
-  # A: 
+  ### A What is a backup and restore strategy and why are they important? 
+  
+  ### B What is the difference between a full and incremental backup?
 
-### Conclusion
+## Conclusion
 
 
