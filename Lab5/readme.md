@@ -27,7 +27,7 @@
 
   There are two types of variables that exist for a database: status and system variables.
   
-  Status variables contan information about the status of the database, such as the connections variable that informs the administrator of how many connection attempts were made for the database. Similarly, system variables provide information about the database system itself, such as how it is currently configured. For example, the binlog_format variable describes how the binary logs for the database are formatted.
+  **Status variables** contan information about the status of the database, such as the connections variable that informs the administrator of how many connection attempts were made for the database. Similarly, **system variables** provide information about the database system itself, such as how it is currently configured. For example, the binlog_format variable describes how the binary logs for the database are formatted.
 
 ## Privileges
 
@@ -62,16 +62,22 @@
     GRANT standardUser TO LILY, MIKE;
     
   
-### C Explain why roles would be useful.
+### C: Explain why roles would be useful.
     
    For larger organizations it is easier to create roles and assign individuals to those roles. Then, the privileges can be assigned to each role. If necessary, the Database Administrator can alter the privileges of the role or remove individuals from a role, thus simplifying the process of granting permissions to users overall. It would also be easier to maintain in the long-term.
     
 
 ## Backing Up a Database
 
-  ### A What is a backup and restore strategy and why are they important? 
+  ### A: What is a backup and restore strategy and why are they important? 
   
-  ### B What is the difference between a full and incremental backup?
+   **Backup strategies** are the methods used to create and save a copy of the database in its current state for future use should the system fail for any reason. These strategies include full backups and incremental backups. A full backup is a complete copy of the database, while an incremental backup only contains te updates and alterations made to the database since the previous full backup.
+   
+   A **restore strategy** refers to how the database is restored once a failure has occurred. Typically, this strategy involves using the previous full backup to restore the database and then use the incremental backups to restore the alterations made to the database since the last full backup prior to system failure. 
+   
+   It is extremely important to create backups for a database because it only takes on incident to completely wipe a database of all the information. For example, a harddrive can fail for a vriety of reasons, including hardware overheating and damage caused by a virus. Without a backup of the database, the organization would permanently lose all of the information, and subsequently risk losing millions of dollars or even bankruptcy! Thus, all Database Administrators should prioritize the creation of database bacups and store them on a safe harddrive separate from the one tht contains the active database.
+  
+  ### B: What is the difference between a full and incremental backup?
 
 ## Conclusion
 
