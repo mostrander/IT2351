@@ -32,13 +32,36 @@
 ## Privileges
 
 
-### A
+### A: Explain the following code (copy and paste the code into your readme.md file and comment all sections): 
+    // Create two users for the database, establish a password for each user
+    CREATE USER guitar_admin@localhost IDENTIFIED BY 'pa55word';
+    CREATE USER guitar_user@localhost IDENTIFIED BY 'pa55word'; 
+    
+    // Give all privileges to admin user for all guitar database tables.
+    GRANT ALL 
+    ON guitar.* 
+    TO guitar_admin@localhost; 
 
-### B
+    // Gives the select, insert, update, and delete permissions to user for all tables in the guitar database.
+    GRANT SELECT, INSERT, UPDATE, DELETE 
+    ON guitar.* 
+    TO guitar_user@localhost;
+    
+ The code above is used to establish two users for a database and grant permissions to each user for all of the tables in the guitar database. Each user is indentified by a password that they would use to login to the database. 
 
-### C
+### B: What are the privilege levels that can be granted to a user?
 
-### D
+ There are four levels of privileges that are used to grant users permissions for a database. Global level grants permissions for all databases and tables. The database level grants permissions to all tables within a specific table. The table level grants permission to all the columns is a specific table, and the column level only grants permission to a single column. 
+
+### C: How would this code change to grant column privileges to the customer first_name, last_name and email_address? 
+
+     GRANT *.* (first_name, last_name, email_address)
+     ON guitar.customers
+     TO guitar_user@localhost;
+
+### D: Why would you want to do this?
+
+  The Database Administrator may want to restrict what information a user or group of users could modify by limiting what fields they could change. This can help limit user errors to an extend.
 
 
 ## Roles
