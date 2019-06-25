@@ -43,6 +43,29 @@
 
 ### Roles
 
+  # A: Create a role to provide update privileges to the categories table (either here in discussion format or in MySQL Workbench)
+    
+    CREATE ROLE standardUser;
+    
+    GRANT UPDATE
+    ON [database name].categories 
+    TO standardUser;
+    
+    Note: Replace [database name] with the actual name of the database being used for this SQL statement.
+  
+  # B: Grant privileges to the role and, assign users to the role (either here in discussion format or in MySQL Workbench)
+    
+    GRANT SELECT, INSERT, UPDATE
+    ON [database name].categories 
+    TO standardUser;
+    
+    GRANT standardUser TO LILY, MIKE;
+    
+  
+  # C: Explain why roles would be useful.
+    
+      For larger organizations it is easier to create roles and assign individuals to those roles. Then, the privileges can be assigned to each role. If necessary, the Database Administrator can alter the privileges of the role or remove individuals from a role, thus simplifying the process of granting permissions to users overall. It would also be easier to maintain in the long-term.
+    
 
 ### Backing Up a Database
 
