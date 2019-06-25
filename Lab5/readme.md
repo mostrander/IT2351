@@ -55,7 +55,7 @@
 
 ### C: How would this code change to grant column privileges to the customer first_name, last_name and email_address? 
 
-     GRANT *.* (first_name, last_name, email_address)
+     GRANT SELECT, INSERT, UPDATE (first_name, last_name, email_address)
      ON guitar.customers
      TO guitar_user@localhost;
 
