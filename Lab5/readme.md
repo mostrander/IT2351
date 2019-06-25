@@ -1,5 +1,6 @@
 ## Executive Summary
 
+  This lab is focused on explaining additional concepts SQL users and administrators should be aware of, such as: Database Administrator responsibilities, log files, database variables, privileges, roles, and how to backup a database. I provide a description of each topic below.
 
 ## Database Administrator Responsibilities 
 
@@ -106,4 +107,4 @@
 
 ## Conclusion
 
-
+  I have provided a lengthy description of each topic discussed in this lab. I explained that Database Administrators are responsible for creating, maintaining, and protecting a database for an organization through a variety of methods, including restricting user activity via roles and permissions, as well as creating backups for the database. It is important to maintain backups of the database because there are several possible causes of system failure. Incremental backups can be used to restore updates to the database since the last full backup. There are several different levels of privileges that can be used to grant different permissions to users, as well as the ability to create roles that users can be assigned to simplify managing privileges.
