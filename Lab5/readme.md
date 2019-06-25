@@ -25,6 +25,9 @@
 
 ### Variables
 
+  There are two types of variables that exist for a database: status and system variables.
+  
+  Status variables contan information about the status of the database, such as the connections variable that informs the administrator of how many connection attempts were made for the database. Similarly, system variables provide information about the database system itself, such as how it is currently configured. For example, the binlog_format variable describes how the binary logs for the database are formatted.
 
 ### Privileges
 
