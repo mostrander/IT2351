@@ -10,7 +10,7 @@ BEGIN
     FROM ostrander_guitar_shop.products
     WHERE product_id = new.product_id;
 -- issues error message if discount percent is not within allowed range
-    IF (discount_percent_amount > 100.00) OR (discount_percent_amount < 0.00) THEN
+    IF (new.discount_percent_amount > 100.00) OR (new.discount_percent_amount < 0.00) THEN
 		SIGNAL SQLSTATE 'HY000'
         SET message_text = "Discount percent must be between 0 - 100.";
 	END IF;
